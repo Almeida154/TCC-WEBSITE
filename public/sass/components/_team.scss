@@ -1,0 +1,149 @@
+.team {
+    @include boundaries(60px);
+    background-color: $cultured;
+    position: relative;
+    background-repeat: repeat;
+
+    .particles {
+        @include noise();
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: .9;
+    }
+
+    &__title {
+        @include boundaries();
+
+        h3 {
+            @include gradientText();
+            @include Futura(Medium);
+            padding: 40px 40px 40px;
+            font-size: 3rem;
+            line-height: 100%;
+
+            @media (max-width: $medium) {
+                padding: 40px 20px 120px;
+            }
+            @media (max-width: $small) {
+                font-size: 2.6rem;
+                padding: 40px 20px 100px;
+            }
+            @media (max-width: $very-small) {
+                padding: 40px 20px 40px;
+            }
+        }
+    }
+
+    &__content {
+        @include flex();
+        width: 100%;
+        margin: 0 auto;
+        flex-wrap: wrap-reverse;
+        
+        .integrant {
+            @include Futura(Medium);
+            text-align: center;
+            color: $onyx;
+            width: 25%;
+    
+            img { margin: 0 auto; }
+    
+            h6 {
+                font-size: 1.6rem;
+                color: $red-crayola;
+                letter-spacing: 2px;
+                transition: .3s;
+            }
+    
+            h4 {
+                font-size: .9rem;
+                text-transform: uppercase;
+                transition: .3s;
+            }
+    
+            p a {
+                font-size: 1.4rem;
+                text-decoration: none;
+    
+                i {
+                    margin: 5px;
+                    color: #818181;
+                    transition: 0.3s;
+                }
+                
+                i:hover {
+                    color: $red-crayola;
+                    transform: translateY(-0.20em);
+                }
+            }
+    
+            @media (max-width: $medium) {
+                width: 50%;
+                h6 { font-size: 1.6rem; }
+                h4 { font-size: 1rem; }
+                p a {
+                    font-size: 1.4rem;
+                }
+            }
+    
+            @media (max-width: $very-small) {
+                width: 75%;
+            }
+        }
+        
+        @media (max-width: $medium) and (min-width: $very-small + 1) {
+            flex-wrap: wrap;
+            .integrant:nth-child(odd) {
+                margin-top: 10px;
+            }
+            .integrant:nth-child(even) {
+                margin-top: -240px;
+            }
+            .integrant:last-child {
+                align-self: flex-end;
+                align-content: flex-end;
+                margin-top: -115px;
+            }
+        }
+
+        @media (max-width: $medium) and (min-width: $very-small + 1) {
+            width: 90%;
+            justify-content: flex-end;
+        }
+
+        @media (max-width: $very-small) {
+            width: 80%;
+            .integrant + .integrant {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+.team > {
+    img:first-of-type {
+        top: 0;
+        right: 100px;
+        position: absolute;
+        width: 200px;
+        transition: .3s;
+
+        @media (max-width: $small) {
+            right: 40px;
+        }
+    }
+    img:last-of-type {
+        bottom: 0;
+        left: -100px;
+        position: absolute;
+        width: 200px;
+        transition: .3s;
+
+        @media (max-width: $small) {
+            right: 40px;
+        }
+    }
+}

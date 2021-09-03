@@ -1,0 +1,47 @@
+.topics {
+    @include boundaries();
+    background-color: $white;
+    box-shadow: 10px 0 40px 0 rgba(0, 0, 0, .3);
+
+    &__content {
+        @include flex();
+        flex: 1;
+        gap: 80px;
+        padding: 80px;
+        transition: .3s;
+
+        .topic {
+            width: calc(100% / 3);
+            align-self: baseline;
+
+            &__icon img {
+                height: 60px;
+                margin-bottom: 16px;
+            }
+
+            h5 {
+                @include Futura(Light);
+                font-size: 1.8rem;
+                margin-bottom: 8px
+            }
+
+            p {
+                @include Futura(Light);
+                font-weight: bold;
+                line-height: 90%;
+                font-size: 1.4rem;
+                text-align: justify;
+                opacity: .6;
+            }
+
+            @media (max-width: $medium) {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: $medium) {
+            flex-direction: column;
+            padding: 140px 40px 80px;
+        }
+    }
+}

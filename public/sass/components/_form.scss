@@ -1,0 +1,33 @@
+$height: 40px;
+
+input, textarea {
+    @include Futura(Medium);
+    color: $cultured;
+    font-size: 1.2rem;
+    width: 100%;
+    height: $height;
+    padding: 10px 15px;
+    background-color: transparent;
+    border: 3px #0d1011 solid;
+    outline: none;
+    opacity: .6;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    padding: 0;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    background-color: #0d1011;
+    width: 50%;
+
+    @media (max-width: $large) {
+        font-size: .8rem;
+    }
+}
+
+textarea {
+    resize: none;
+    height: #{$height * 2};
+    margin-bottom: 0;
+}

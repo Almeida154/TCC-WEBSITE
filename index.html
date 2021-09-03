@@ -1,360 +1,425 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="public/img/favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="public/css/main.css">
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <!-- ajax (slide) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <title>Evoke</title>
+    <title>Evoke | Sua empresa de software</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> <!-- Flickity -->
+    <link rel="stylesheet" href="public/sass/main.css">
+    <link rel="shortcut icon" href="public/img/favicon/favicon-32x32.png" type="image/x-icon">
 </head>
-
 <body>
     <header>
-        <section class="welcome">
-            <img id="icon-header" src="public/img/PrintVSCode.PNG" alt="">
+        <div class="particles"></div>
+        <div class="hero">
+            <img src="public/img/vscode.png" alt="" srcset="">
 
-            <div class="container-logo">
-                <img id="logo" src="public/img/logoClaraFundo.png" alt="">
+            <div class="hero__content">
+                <img src="public/svg/Evoke_White_Lines.svg" alt="" srcset="">
+                <h1>Sua <span>empresa</span> de software <span>favorita.</span></h1>
+                <p>Contrate a melhor startup de desenvolvimento de sistemas!</p>
+            </div>
+        </div>
 
-                <h1>Sua <span class="gt">empresa</span> de software favorita do <span class="gt">momento.</span></h1>
-
-                <p>Desenvolvimento de sistemas em geral com ênfase no desenvolvimento de aplicações mobile</p>
-
-                <div class="tech-container">
-                    <div class="technologies">
-                        <img src="public/svg/javascript.svg" alt="">
-                        <img src="public/svg/typescript.svg" alt="">
-                        <img src="public/svg/nodejs.svg" alt="">
-                        <img src="public/svg/react.svg" alt="">
-                        <img src="public/svg/laravel.svg" alt="">
-                    </div>
-                </div>
+        <section class="about-us anime-top">
+            <div class="about-us__content">
+                <h2>a Evoke</h2>
+                <p>A empresa Evoke é atuante no setor de informática e é especializada no desenvolvimento de softwares para empresas de pequeno e médio porte. Foi criada outubro de 2020 com o objetivo de desenvolver o trabalho de conclusão do curso de Técnico de Desenvolvimento de Sistemas integrado ao médio da escola técnica estadual de Guaianazes, em São Paulo, SP.</p>
             </div>
         </section>
 
-        <section class="description">
-            <h3 id="txt-title">Sobre nós</h3>
-            <p id="txt-desc">A empresa Evoke é atuante no setor de informática e é especializada no desenvolvimento de
-                softwares para empresas de pequeno e médio porte.
-                <br>Foi criada outubro de 2020 com o objetivo de desenvolver o trabalho de conclusão do curso de Técnico
-                de Desenvolvimento de Sistemas integrado ao médio da escola técnica estadual de Guaianazes, em São
-                Paulo, SP.
-            </p>
-        </section>
-
-        <section class="header-content"></section>
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        <section>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
-            <defs>
-                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-            </defs>
-            <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
-            </g>
-        </svg>
+                <defs>
+                    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </section>
     </header>
 
-    <section class="topics">
-        <div class="container-topics">
-            <div class="topic">
-                <div class="icon-topic">
-                    <img src="public/img/website.png" alt="">
-                </div>
-                <h5>Our code</h5>
-                <p>Entregamos a melhor qualidade através de dedicação, trabalho duro e comprometimento. Levando assim a
-                    satisfação à nossos clientes.</p>
-            </div>
-            <div class="topic">
-                <div class="icon-topic">
-                    <img src="public/img/performance.png" alt="">
-                </div>
-                <h5>Performance</h5>
-                <p>Somos referência em soluções digitais de alto impacto através de nossos projetos com altos padrões de
-                    qualidade.</p>
-            </div>
-            <div class="topic">
-                <div class="icon-topic">
-                    <img src="public/img/humans.png" alt="">
-                </div>
-                <h5>Relationship</h5>
-                <p> Impulsionamos o progresso da sociedade através de conexões significativas entre pessoas e
-                    tecnologias.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Wave -->
-
-    <div class="wave1"></div>
-
-    <!-- Sections -->
-
-    <section class="sections">
-        <h3 id="sections-title">Nossos projetos</h3>
-        <div class="section-icon">
-            <div class="content-container left">
-                <h3 class="gt">REFINANCES</h3>
-                <p>É um sistema mobile de organização financeira que pode ajudar pessoas comuns e sem entendimento de
-                    finanças a administrar melhor seu dinheiro. </p>
-                <p>O aplicativo conta com facilidades para registrar e exibir os gastos e ganhos, como <b>reconhecimento
-                        de voz e texto</b> para incentivar o uso do app.</p>
-            </div>
-            <div class="icon-container">
-                <img class="icon" src="public/svg/icon1.svg" alt="">
-            </div>
-        </div>
-
-        <div class="section-icon right">
-            <div class="icon-container">
-                <img class="icon" src="public/svg/icon2.svg" alt="">
-            </div>
-            <div class="content-container right">
-                <h3 class="gt">TITULO 2</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit natus adipisci veniam eius distinctio
-                    praesentium hic eligendi error.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolor, numquam eum, ratione id.</p>
-            </div>
-        </div>
-
-        <div class="section-icon">
-            <div class="content-container left">
-                <h3 class="gt">TITULO 3</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit natus adipisci veniam eius distinctio
-                    praesentium hic eligendi error.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolor, numquam eum, ratione id.</p>
-            </div>
-            <div class="icon-container">
-                <img class="icon" src="public/svg/icon3.svg" alt="">
-            </div>
-        </div>
-    </section>
-
-    <!-- Wave -->
-
-    <div class="wave3"></div>
-
-    <!-- Idk yet 2 -->
-
-    <section class="idky2">
-        <div class="idky2-content">
-            <h3>Lorem ipsum dolor, sit amet</h3>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit, magni dolor? Accusamus modi iste
-                doloremque maxime minima explicabo architecto distinctio, nihil labore quisquam animi dolore. At ea
-                quibusdam nobis placeat?</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Possimus mollitia eveniet aspernatur sequi.
-                Necessitatibus nihil dignissimos mollitia, perspiciatis nemo, officiis recusandae explicabo cumque
-                provident, earum velit assumenda ea rerum saepe.</p>
-        </div>
-        <img src="public/svg/monitor.svg" alt="">
-    </section>
-
-    <!-- App Ads -->
-
-    <section class="app">
-        <div class="img-content">
-            <img src="public/img/prototipoapp.png" alt="">
-        </div>
-        <div class="app-content">
-            <div class="app-wrapper">
-                <h3>Refinances<br>project</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae in sequi maxime eum debitis nisi
-                    officia suscipit?</p>
-                <button>Baixar</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- My teams -->
-
-    <section class="topics">
-        <h3><span class="gtd">Nossa Equipe</span></h3>
-        <center>
-            <div class="container-topics">
-                <div class="topic">
-                    <div class="icon-topic">
-                        <span>
-                            <img src="public/img/Blob-Samuel.png" alt="">
-                        </span>
+    <main>
+        <section class="topics">
+            <div class="topics__content">
+                <div class="topic anime-top">
+                    <div class="topic__icon">
+                        <img src="public/img/icons/website.png" alt="">
                     </div>
-                    <h6>Samuel Guerra</h6>
-                    <h1>Diretor</h1>
-                    <p>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </p>
+                    <h5>Nosso trabalho</h5>
+                    <p>Entregamos a melhor qualidade através de dedicação, trabalho duro e comprometimento. Levando assim a satisfação à nossos clientes.</p>
                 </div>
-                <div class="topic">
-                    <div class="icon-topic">
-                        <span>
-                            <img src="public/img/Blob-David.png" alt="">
-                        </span>
+                <div class="topic anime-top">
+                    <div class="topic__icon">
+                        <img src="public/img/icons/performance.png" alt="">
                     </div>
-                    <h6>David Almeida</h6>
-                    <h1>Gerente de projetos</h1>
-                    <p>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </p>
+                    <h5>Performance</h5>
+                    <p>Somos referência em soluções digitais de alto impacto através de nossos projetos com altos padrões de qualidade.</p>
                 </div>
-                <div class="topic">
-                    <div class="icon-topic">
-                        <span>
-                            <img src="public/img/Blob-Wallace.png" alt="">
-                        </span>
+                <div class="topic anime-top">
+                    <div class="topic__icon">
+                        <img src="public/img/icons/humans.png" alt="">
                     </div>
-                    <h6>Wallace Moura</h6>
-                    <h1>Programador</h1>
-                    <p>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </p>
+                    <h5>Relacionamento</h5>
+                    <p> Impulsionamos o progresso da sociedade através de conexões significativas entre pessoas e tecnologias.</p>
                 </div>
             </div>
+        </section>
 
-            <div class="container-topics">
-                <div class="topic">
-                    <div class="icon-topic">
-                        <span>
-                            <img src="public/img/Blob-Mariana.png" alt="">
-                        </span>
+        <section class="timeline">
+            <div class="timeline__content">
+                <img src="public/svg/stand.svg" alt="" srcset="">
+                <div class="item left">
+                    <div class="item__date anime-left">10/20</div>
+                    <div class="item__content anime-left">
+                      <h2>Empresa fundada</h2>
+                      <p>💙 A <span>Evoke</span> é criada por David, Samuel, Mariana, Wallace, Phillip, Italo e Isabella.</p>
                     </div>
+                </div>
+                <div class="item right">
+                    <div class="item__date anime-right">01/21</div>
+                    <div class="item__content anime-right">
+                      <h2>Primeira reunião</h2>
+                      <p>Evoke tem sua <span>primeira</span> reunião realizada. ✅</p>
+                    </div>
+                </div>
+                <div class="item left">
+                    <div class="item__date anime-left">02/21</div>
+                    <div class="item__content anime-left">
+                      <h2>Identidade visual</h2>
+                      <p>🚀 Foi definido o <span>nome</span>, <span>logo</span>, <span>slogan</span> e <span>descrição</span> da empresa.</p>
+                    </div>
+                </div>
+                <div class="item right">
+                    <div class="item__date anime-right">03/21</div>
+                    <div class="item__content anime-right">
+                      <h2>Logo & Design</h2>
+                      <p>É iniciado o trabalho a respeito da <span>logo</span> e <span>design</span> da empresa. 🎨</p>
+                    </div>
+                </div>
+                <div class="item left">
+                    <div class="item__date anime-left">06/21</div>
+                    <div class="item__content anime-left">
+                      <h2>Mãos à obra</h2>
+                      <p>🔨 Começamos o desenvolvimento do <span>Refinances</span>, nosso principal projeto.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects">
+            <div class="projects__wave"></div>
+            <div class="projects__title anime-top">
+                <h3>O que já realizamos</h3>
+            </div>
+            <div class="projects__content">
+                <div class="projects__carousel anime-right">
+                    <div class="cell">
+                        <div class="image">
+                            <img src="public/img/projects/GellaGuella.PNG" alt="" srcset="">
+                        </div>
+                        <div class="info">     
+                            <h4>Gella Guella</h4>
+                            <p>Empresa de bebidas e petiscos destinados ao público adulto.</p>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="image">
+                            <img src="public/img/projects/TryKeep.PNG" alt="" srcset="">
+                        </div>
+                        <div class="info">     
+                            <h4>TryKeep</h4>
+                            <p>Gerenciador web de dinheiro.</p>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="image">
+                            <img src="public/img/projects/PrefeituraMunicipaldePinheiro.PNG" alt="" srcset="">
+                        </div>
+                        <div class="info">     
+                            <h4>Prefeitura Municipal de Pinheiro</h4>
+                            <p>Site oficial da Prefeitura de Pinheiro, Maranhão.</p>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="image">
+                            <img src="public/img/projects/ServeX.jpeg" alt="" srcset="">
+                        </div>
+                        <div class="info">
+                            <h4>ServeX</h4>
+                            <p>Dicionário online de termos técnicos do mundo tecnológico.</p>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="image">
+                            <img src="public/img/projects/Rap10.PNG" alt="" srcset="">
+                        </div>
+                        <div class="info">
+                            <h4>Baterias Rap10</h4>
+                            <p>Empresa voltada ao ramo da venda de baterias de carro.</p>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="image">
+                            <img src="public/img/projects/SneakerWorld.PNG" alt="" srcset="">
+                        </div>
+                        <div class="info">
+                            <h4>Sneaker World</h4>
+                            <p>Loja voltada à venda de sneakers.</p>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="image">
+                            <img src="public/img/projects/ProjectCars.PNG" alt="" srcset="">
+                        </div>
+                        <div class="info">
+                            <h4>Project Cars</h4>
+                            <p>Empresa atuante no nicho automotivo. Atua com vendas de carros de alto padrão.</p>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="image">
+                            <img src="public/img/projects/MVE.PNG" alt="" srcset="">
+                        </div>
+                        <div class="info">
+                            <h4>Museu Virtual do Espaço</h4>
+                            <p>Museu virtual de objetos espaciais.</p>
+                        </div>
+                    </div>
+                    <div class="cell">
+                        <div class="image">
+                            <img src="public/img/projects/BookStore.PNG" alt="" srcset="">
+                        </div>
+                        <div class="info">
+                            <h4>Book Store</h4>
+                            <p>Loja de livros em geral.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="quote anime-top">
+            <div class="quote__wave"></div>
+            <div class="quote__content">
+                <img class="quote" src="public/svg/quote.svg" alt="">
+                <img class="quote" src="public/svg/quote.svg" alt="">
+                <p>Quando algo é importante o suficiente, você realiza, mesmo que as chances não estejam a seu favor.</p>
+                <span>Elon Musk</span>
+            </div>
+        </section>
+        
+        <section class="team">
+            <img src="public/svg/lamp.svg" alt="">
+            <img src="public/svg/vase.svg" alt="">
+            <div class="particles"></div>
+            <div class="team__title anime-top">
+                <h3>Nosso time</h3>
+            </div>
+            <div class="team__content">
+                <div class="integrant anime-left">
+                    <img src="public/img/blobs/blob-mariana.png" alt="">
                     <h6>Mariana Santos</h6>
-                    <h1>Analista</h1>
+                    <h4>Analista</h4>
                     <p>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </p>
                 </div>
-                <div class="topic">
-                    <div class="icon-topic">
-                        <span>
-                            <img src="public/img/Blob-Phillip.png" alt="">
-                        </span>
-                    </div>
+                <div class="integrant anime-left">
+                    <img src="public/img/blobs/blob-phillip.png" alt="">
                     <h6>Phillip Anselmo</h6>
-                    <h1>DBA</h1>
+                    <h4>DBA</h4>
                     <p>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </p>
                 </div>
-                <div class="topic">
-                    <div class="icon-topic">
-                        <span>
-                            <img src="public/img/Blob-Italo.png" alt="">
-                        </span>
-                    </div>
+                <div class="integrant anime-left">
+                    <img src="public/img/blobs/blob-italo.png" alt="">
                     <h6>Italo Ferreira</h6>
-                    <h1>Programador</h1>
+                    <h4>Programador</h4>
                     <p>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </p>
                 </div>
-                <div class="topic">
-                    <div class="icon-topic">
-                        <span>
-                            <img src="public/img/Blob-Isabela.png" alt="">
-                        </span>
-                    </div>
+                <div class="integrant anime-left">
+                    <img src="public/img/blobs/blob-isabela.png" alt="">
                     <h6>Isabela Saori</h6>
-                    <h1>Designer</h1>
+                    <h4>Designer</h4>
                     <p>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-github"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </p>
+                </div>
+                <div class="integrant anime-left">
+                    <img src="public/img/blobs/blob-samuel.png" alt="">
+                    <h6>Samuel Guerra</h6>
+                    <h4>Diretor</h4>
+                    <p>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </p>
+                </div>
+                <div class="integrant anime-left">
+                    <img src="public/img/blobs/blob-david.png" alt="">
+                    <h6>David Almeida</h6>
+                    <h4>Gerente de Projetos</h4>
+                    <p>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </p>
+                </div>
+                <div class="integrant anime-left">
+                    <img src="public/img/blobs/blob-wallace.png" alt="">
+                    <h6>Wallace</h6>
+                    <h4>Programador</h4>
+                    <p>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
                     </p>
                 </div>
             </div>
-        </center>
-    </section>
+        </section>
 
-    <!-- Wave -->
-
-    <div class="wave2"></div>
-
-    <!-- Parceiras -->
-
-    <section class="idky1">
-        <div class="idky1-container">
-            <h3 id="idky1-title">Nossas Parceiras:</h3>
-            <div class="parceiros">
-                <ul>
-                    <li> <img src="public/img/logoLunarNegativada.png" alt=""> </li>
-                    <li> <img src="public/img/logoAura.png" alt=""> </li>
-                    <li> <img src="public/img/logoSaturno.png" alt=""></li>
-                    <li> <img src="public/img/logoBifrost.png" alt=""> </li>
-                </ul>
+        <section class="partners">
+            <div class="partners__title anime-top">
+                <h3>Parceiros</h3>
             </div>
-        </div>
-    </section>
+            <div class="partners__content anime-top">
+                <div class="partner">
+                    <img src="public/img/partners/partner-aura.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="public/img/partners/partner-bifrost.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="public/img/partners/partner-lunar.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="public/img/partners/partner-saturno.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="public/img/partners/partner-lunar.png" alt="">
+                </div>
+                <div class="partner">
+                    <img src="public/img/partners/partner-saturno.png" alt="">
+                </div>   
+            </div>
+        </section>
 
+        <section class="app anime-top">
+            <div class="app__container">
+                <div class="content">
+                    <div class="title">
+                        <div class="title__square">
+                            <h3>Refinances</h3>
+                        </div>
+                        <div class="title__square">
+                            <img src="public/svg/Evoke_Icon_White.svg" alt="">
+                        </div>
+                    </div>
+                    <div class="refinances">
+                        <h2>Refinances, nosso mais novo projeto.</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus officia debitis aspernatur fugiat autem temporibus?</p>
+                        <button>Conferir</button>
+                    </div>
+                    <img class="print anime-right" src="public/img/register.png" alt="">
+                    <img class="print anime-right" src="public/img/home.png" alt="">
+                </div>
+            </div>
+        </section>
 
-
-    <!-- Footer -->
+        <section class="contact">
+            <img src="public/svg/monitor.svg" alt="" srcset="">
+            <div class="contact__content">
+                <form action="">
+                    <h4>Contate-nos</h4>
+                    <input type="text" placeholder="Nome">
+                    <input type="text" placeholder="Email">
+                    <textarea placeholder="Assunto"></textarea>
+                    <input type="submit" value="Enviar">
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12 col-md-6">
-                    <h6>Sobre Nós</h6>
-                    <p class="text-justify">A empresa <i>EVOKE</i> atua no setor da tecnologia e é especializada no
-                        desenvolvimento de softwares para empresas de pequeno e médio porte.</p>
-                </div>
-                <div class="col-xs-6 col-md-3">
-
-                    <ul class="footerRight">
-                        <h6>Navegação do Site</h6>
-                        <li><a href="">Sobre Nos</a></li>
-                        <li><a href="">Integrantes</a></li>
-                        <li><a href="">Refinances</a></li>
-                        <li><a href="">Privacy Policy</a></li>
-                    </ul>
+        <div class="footer__content">
+            <div class="info">
+                <div class="info__content">
+                    <div class="services">
+                        <div class="services__content">
+                            <img src="public/img/Evoke_Colorful_Lines.png" alt="" srcset="">
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut maxime facilis aperiam!</p>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut maxime facilis aperiam!</p>
+                        </div>
+                    </div>
+                    <div class="shortcut">
+                        <div class="shortcut__content">
+                            <h6>Navegação do Site</h6>
+                            <ul>
+                                <li><a href="">Sobre Nos</a></li>
+                                <li><a href="">Histórico</a></li>
+                                <li><a href="">Projetos</a></li>
+                                <li><a href="">Time</a></li>
+                                <li><a href="">Refinances</a></li>
+                                <li><a href="">Parceiros</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="newsletter">
+                        <div class="newsletter__content">
+                            <h6>Nossa Newsletter</h6>
+                            <p>Assine e fique por dentro das novidades. É de graça!</p>
+                            <form action="" autocomplete="off">
+                                <input type="email" placeholder="Email">
+                                <input type="submit" value="Enviar">
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <hr>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8 col-sm-6 col-xs-12">
-                    <p class="copyright-text">Evoke © Copyright 2021</p>
-                    </p>
-                </div>
-
-                <div class="col-md-4 col-sm-6 col-xs-12">
-                    <ul class="social-icons">
-                        <li><a class="twitter" href="#">
-                                <j class="fab fa-github"></j>
-                            </a></li>
-                        <li><a class="dribbble" href="#">
-                                <j class="fa fa-youtube"></j>
-                            </a></li>
-                        <li><a class="linkedin" href="#">
-                                <j class="fa fa-linkedin"></j>
-                            </a></li>
+            <div class="credit">
+                <div class="credit__content">
+                    <p>Evoke © Copyright 2021</p>
+                    <ul>
+                        <li>
+                            <a class="twitter" href="#"><i class="fab fa-github"></i></a>
+                        </li>
+                        <li>
+                            <a class="dribbble" href="#"><i class="fa fa-youtube"></i></a>
+                        </li>
+                        <li>
+                            <a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/e848e7d301.js" crossorigin="anonymous"></script>
-</body>
 
+    <script src="https://kit.fontawesome.com/f81df082bf.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <script src="./public/js/animation.js"></script>
+    <script src="./public/js/slider.js"></script>
+</body>
 </html>

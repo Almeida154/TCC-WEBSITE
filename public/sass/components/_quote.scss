@@ -1,0 +1,93 @@
+.quote {
+    &__wave {
+        @include wave(80px);
+        background-image: url('../svg/wave2.svg');
+    }
+
+    &__content {
+        position: relative;
+        @include boundaries();
+        @include gradientBackground($eerie-black, $majorelle-blue);
+        @include Futura(Light);
+        @include flex();
+        flex-direction: column;
+        padding: 20px 40px;
+        height: 100vh;
+
+        .quote {
+            $marginHorizontal: 120px;
+            $marginVertical: 80px;
+
+            position: absolute;
+            width: 120px;
+            opacity: .05;
+            transition: .3s;
+
+            &:first-child {
+                left: $marginHorizontal;
+                top: $marginVertical;
+            }
+
+            &:nth-child(2) {
+                right: $marginHorizontal;
+                bottom: $marginVertical;
+                transform: rotateY(180deg);
+            }
+
+            @media (max-width: $medium) {
+                &:first-child {
+                    left: $marginHorizontal / 2;
+                }
+                &:nth-child(2) {
+                    right: $marginHorizontal / 2;
+                }
+            }
+
+            @media (max-width: $small) {
+                &:first-child {
+                    top: $marginVertical + 10;
+                    left: calc(50% - 60px);
+                }
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+
+        p {
+            line-height: 100%;
+            text-align: center;
+            font-size: 3.5rem;
+            width: 80%;
+            color: $white;
+            opacity: 1;
+            transition: .3s;
+
+            @media (max-width: $medium) { font-size: 2.6rem; }
+
+            @media (max-width: $small) { font-size: 2.3rem; }
+
+            @media (max-width: $very-small) {
+                font-size: 2rem;
+                width: 100%;
+            }
+
+            @media (min-width: 1400px) { width: 60%; }
+        }
+
+        span {
+            width: 80%;
+            font-size: 2rem;
+            text-align: right;
+            color: $picotee-blue;
+            opacity: .5;
+            margin-top: 14px;
+            transition: .3s;
+
+            @media (max-width: $very-small) {
+                text-align: center;
+                margin-top: 60px;
+            }
+        }
+    }
+}

@@ -1,0 +1,161 @@
+header {
+    @include boundaries();
+    position: relative;
+    height: calc(100vh + 600px);
+    background: linear-gradient($eerie-black, $gunmetal);
+    overflow-x: hidden;
+
+    .particles {
+        @include noise();
+        position: absolute;
+        width: 100%;
+        height: calc(100vh + 600px);
+        top: 0;
+        left: 0;
+        opacity: .22;
+    }
+
+    .hero > {
+        img {
+            @include animate(y, 3s);
+            position: absolute;
+            min-width: 55%;
+            top: 30px;
+            right: 0;
+            opacity: 1;
+            filter: blur(1px);
+            mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), to(rgba(0, 0, 0, 0)));
+        }
+    }
+
+    .hero {
+        @include flex(false, true);
+        padding: 0 40px;
+        height: 100vh;
+        width: 100%;
+        
+        &__content {
+            @include animate(y, 2s);
+            z-index: 10;
+
+            flex: 1;
+            color: $white;
+
+            img {
+                width: 200px;
+                max-width: 100%;
+                opacity: 1;
+                margin-bottom: 64px;
+            }
+
+            h1 {
+                @include Nunito(Bold);
+                line-height: 70%;
+                display: block;
+                width: 65%;
+                max-width: 576px;
+                font-size: 4.5rem;
+                margin-bottom: 32px;
+                transition: .3s;
+
+                span { @include gradientText() }
+            }
+
+            p {
+                //@include Nunito(Light);
+                @include Futura(Light);
+                line-height: 70%;
+                width: 65%;
+                max-width: 576px;
+                font-size: 2rem;
+                opacity: .4;
+                transition: .3s;
+            }
+
+            @media (max-width: $medium) {
+                h1, p {
+                    width: 85%;
+                }
+            }
+
+            @media (max-width: $small) {
+                h1, p { width: 100%; }
+                h1 { font-size: 3rem; }
+                p { font-size: 1.2rem; }
+            }
+
+            @media (max-width: $very-small) {
+                h1, p { text-align: center; }
+                img { margin: 0 auto 64px; }
+            }
+        }
+    }
+
+    .about-us {
+        @include flex(true, false);
+        height: 600px;
+        padding: 0 40px;
+
+        &__content {
+            padding: 0 140px;
+            color: $white;
+            transition: .3s;
+
+            h2 {
+                @include Futura(Light);
+                font-size: 3.2rem;
+                transition: .3s;
+                margin-bottom: 32px;
+            }
+
+            p {
+                @include Futura(Light);
+                font-size: 1.5rem;
+                transition: .3s;
+                text-align: justify;
+                opacity: .3;
+            }
+
+            @media (max-width: $large) { padding: 0; }
+            
+            @media (max-width: $small) {
+                h2 { font-size: 2.5rem; }
+                p { font-size: 1.2rem; }
+            }
+        }
+    }
+
+    section > {
+        .waves {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 15vh;
+            min-height: 100px;
+            max-height: 150px;
+
+            .parallax > {
+                use { @include wave-animate() }
+                use {
+                    &:nth-child(1) {
+                        animation-delay: -2s;
+                        animation-duration: 7s;
+                    }
+                    &:nth-child(2) {
+                        animation-delay: -3s;
+                        animation-duration: 10s;
+                    }
+                    &:nth-child(3) {
+                        animation-delay: -4s;
+                        animation-duration: 13s;
+                    }
+                    &:nth-child(4) {
+                        animation-delay: -5s;
+                        animation-duration: 20s;
+                    }
+                }
+            }
+        }
+    }
+}

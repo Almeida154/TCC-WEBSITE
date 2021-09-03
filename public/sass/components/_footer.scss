@@ -1,0 +1,210 @@
+@import 'form';
+
+.footer {
+    @include Futura(Medium);
+    background-color: #0d1011f8;
+    color: $white;
+    
+    &__content {
+        
+        .info {
+            @include boundaries(80px);
+            
+            &__content {
+                @include flex();
+                //background-color: red;
+                justify-content: space-between;
+                gap: 30px;
+                padding: 0 80px;
+                
+                h6 {
+                    @include gradientText;
+                    line-height: 100%;
+                    font-size: 1.8rem;
+                    opacity: .8;
+                    transition: .3s;
+                }
+
+                p {
+                    margin-top: 20px;
+                    line-height: 100%;
+                    font-size: 1.4rem;
+                    opacity: .4;
+                    transition: .3s;
+                }
+
+                .services {
+                    @include flex();
+                    //background-color: rgba(0, 128, 0, 0.534);
+                    flex: 1;
+                    align-self: flex-start;
+                    justify-content: flex-start;
+                    
+                    &__content {
+                        background-color: inherit;
+                        img {
+                            width: 120px;
+
+                            @media (max-width: $medium) {
+                                margin: 0 auto;
+                                width: 160px;
+                            }
+                        }
+                    }
+
+                    @media (max-width: $medium) {
+                        align-self: center;
+                        padding: 0 40px;
+                    }
+
+                    @media (max-width: $very-small) { padding: 0; }
+                }
+        
+                .shortcut {
+                    @include flex(true, false);
+                    //background-color: rgba(255, 99, 71, 0.555);
+                    align-self: flex-start;
+                    flex: 1;
+
+                    &__content {
+                        background-color: inherit;
+                        ul {
+                            margin-top: 20px;
+
+                            li {
+                                text-decoration: none;
+                                line-height: 100%;
+                                font-size: 1.4rem;
+                                opacity: .4;
+                                transition: all 0.2s ease-in;
+
+                                a { color: white; }
+                                &:hover { opacity: .8;}
+
+                                @media (max-width: $medium) { font-size: 1.8rem; }
+                                @media (max-width: #{$very-small - 80}) { font-size: 1.4rem; }
+                            }
+                        }
+                    }
+
+                    @media (max-width: $medium) {
+                        align-self: center;
+                    }
+                }
+        
+                .newsletter {
+                    @include flex(true, false);
+                    //background-color: rgba(0, 0, 255, 0.507);
+                    align-self: flex-start;
+                    flex: 1;
+                    justify-content: flex-end;
+
+                    &__content {
+                        background-color: inherit;
+                        width: 80%;
+                        transition: .3s;
+
+                        p { font-size: 1rem; }
+
+                        form {
+                            @include flex();
+                            align-items: flex-start;
+                            margin-top: 20px;
+
+                            @media (max-width: #{$very-small - 80}) {
+                                flex-direction: column;
+                                input {
+                                    width: 100%;
+                                    height: 40px;
+                                }
+                            }
+                        }
+
+                        @media (max-width: $large) {
+                            width: 100%;
+                        }
+
+                        @media (max-width: $medium) {
+                            p { font-size: 1.8rem; }
+                            input { height: 60px; }
+                        }
+
+                        @media (max-width: #{$very-small - 80}) {
+                            p { font-size: 1.4rem; }
+                        }
+                    }
+
+                    @media (max-width: $medium) {
+                        align-self: center;
+                    }
+                }
+
+                @media (max-width: $medium) {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 50px;
+                    h6 { font-size: 2.4rem; }
+                    p { font-size: 1.8rem; }
+                }
+
+                @media (max-width: #{$very-small - 80}) {
+                    padding: 0 40px;
+                    p { font-size: 1.4rem; }
+                }
+            }
+        }
+
+        .credit {
+            @include boundaries(19px);
+            border-top: 2px rgba(0, 0, 0, 0.1) solid;
+            
+            &__content {
+                @include flex();
+                justify-content: space-between;
+                padding: 0 80px;
+
+                p {
+                    color: $cultured;
+                    opacity: .2;
+                    font-size: 1rem;
+                }
+        
+                ul {
+                    @include flex();
+        
+                    li + li { margin-left: 10px; }
+                
+                    a {
+                        background-color: #222222;
+                        color: #818a91;
+                        font-size: 1rem;
+                        display: inline-block;
+                        line-height: 44px;
+                        width: 44px;
+                        height: 44px;
+                        text-align: center;
+                        border-radius: 50%;
+                        transition: all .2s ease-in;
+
+                        &:hover { background-color: #363636; }
+
+                        @media (max-width: $very-small) {
+                            font-size: .8rem;
+                            line-height: 30px;
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+
+                @media (max-width: $medium) { padding: 0 40px; }
+                @media (max-width: #{$very-small - 80}) {
+                    padding: 0 40px;
+                    flex-direction: column;
+                    gap: 10px;
+                    p { font-size: 1.4rem; }
+                }
+            }
+        }
+    }
+}

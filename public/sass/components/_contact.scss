@@ -1,0 +1,59 @@
+.contact {
+    @include boundaries();
+    margin-top: -150px;
+    position: relative;
+    
+    img {
+        height: 700px;
+        position: absolute;
+        left: -500px;
+        top: -200px;
+        transition: .3s;
+
+        @media (max-width: $medium) {
+            height: 500px;
+            left: -350px;
+            top: -30px;
+        }
+        @media (max-width: $small) {
+            left: -400px;
+            top: -30px;
+        }
+        @media (max-width: 510px) {
+            height: 400px;
+            left: -340px;
+        }
+        @media (max-width: 400px) {
+            display: none;
+        }
+    }
+
+    &__content {
+        @include flex();
+        padding: 120px 40px;
+        transition: .3s;
+
+        form {
+            @include flex();
+            flex-direction: column;
+
+            h4 {
+                @include Futura(Medium);
+                @include gradientText();
+                width: 300px;
+                margin-bottom: 20px;
+                font-size: 2rem;
+            }
+
+            input, textarea {
+                width: 300px;
+                margin-bottom: 10px;
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width: 400px) {
+            padding: 120px 40px 40px;
+        }
+    }
+}
