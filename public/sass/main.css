@@ -1295,296 +1295,86 @@ header section>.waves .parallax>use:nth-child(4) {
     }
 }
 
-.app {
-    position: relative;
-    padding: 200px 0;
-    overflow-x: hidden
-}
-
-.app__container {
-    padding: 40px calc((100% - 1200px) / 2);
-    background: linear-gradient(17deg, #9d3147ff 0%, #f81650ff 59%)
-}
-
-.app__container .content {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    padding: 0 40px;
-    height: 80vh
-}
-
-.app__container .content .title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    gap: 20px;
-    position: absolute;
-    top: calc(250px / 7);
-    left: calc(50% - 450px);
-    width: 900px;
-    height: 250px;
-    -webkit-transition: .3s;
-    transition: .3s
-}
-
-.app__container .content .title__square {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1;
+.sectionApp {
+    background: #fff;
+    width: 100%;
+    padding: 0 50px;
+    display: grid;
+    grid-template-rows: 100px 1fr 100px;
     height: 100%;
-    -webkit-box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.15);
-    box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.15)
 }
 
-.app__container .content .title__square:first-child {
-    background-color: white;
-    position: relative
+.logoRefinances {
+    display: flex;
+    align-items: center;
+    margin-top: 15vh;
 }
 
-.app__container .content .title__square:first-child h3 {
+.logoText {
     font-family: HiRolley;
     color: #c5123f;
-    font-size: 3rem;
-    -webkit-transition: .3s;
-    transition: .3s
+    font-size: 4rem;
 }
 
-@media (max-width: 768px) {
-    .app__container .content .title__square:first-child h3 {
-        font-size: 2rem
-    }
+.descRefinances {
+    font-family: Nunito-Bold;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
-@media (max-width: 480px) {
-    .app__container .content .title__square:first-child h3 {
-        font-size: 1.6rem
-    }
-}
-
-.app__container .content .title__square:last-child {
-    background: -webkit-gradient(linear, left top, right top, from(#c5123f), color-stop(59%, #f81650ff));
-    background: linear-gradient(90deg, #c5123f 0%, #f81650ff 59%)
-}
-
-.app__container .content .title__square:last-child img {
-    width: 100px;
-    -webkit-transition: .3s;
-    transition: .3s
-}
-
-@media (max-width: 768px) {
-    .app__container .content .title__square:last-child img {
-        width: 80px
-    }
-}
-
-@media (max-width: 480px) {
-    .app__container .content .title__square:last-child img {
-        width: 50px
-    }
-}
-
-@media (max-width: 992px) {
-    .app__container .content .title {
-        width: 600px;
-        height: 200px;
-        top: calc(250px / 5);
-        left: calc(50% - 300px)
-    }
-}
-
-@media (max-width: 768px) {
-    .app__container .content .title {
-        width: 450px;
-        height: 150px;
-        top: calc(100px / 3);
-        left: calc(50% - 225px)
-    }
-}
-
-@media (max-width: 768px) {
-    .app__container .content .title {
-        gap: 10px
-    }
-}
-
-@media (max-width: 430px) {
-    .app__container .content .title {
-        gap: 0;
-        width: 400px;
-        height: 130px;
-        top: calc(100px / 3);
-        left: calc(50% - 200px)
-    }
-}
-
-.app__container .content .refinances {
-    font-family: Futura-Medium;
+.buttonInstall {
+    font-family: Nunito-Regular;
+    margin: 10px;
+    background: #ee4266;
+    border: none;
     color: #fff;
+    padding: 12px 40px;
+    border-radius: 10px;
+}
+
+.hero-copy-container {
+    width: 40%;
+}
+
+.descRefinances .title {
+    font-family: Nunito-Bold;
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: #4d4d4e;
+}
+
+.imageApp {
     width: 60%;
-    -webkit-transition: .3s;
-    transition: .3s
 }
 
-.app__container .content .refinances h2 {
-    line-height: 70%;
-    font-size: 4.6rem;
-    opacity: .85;
-    -webkit-transition: .3s;
-    transition: .3s
-}
-
-.app__container .content .refinances p {
-    line-height: 100%;
-    font-size: 1.6rem;
-    margin-top: 20px;
-    opacity: .6;
-    -webkit-transition: .3s;
-    transition: .3s
-}
-
-.app__container .content .refinances button {
-    font-family: Futura-Medium;
-    letter-spacing: 2px;
-    background-color: #EE4266;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    margin-top: 20px;
-    border: #BA3450 solid 4px;
-    border-radius: 30px;
-    color: #fff;
-    cursor: pointer;
-    -webkit-transition: .3s;
-    transition: .3s
-}
-
-@media (max-width: 992px) {
-    .app__container .content .refinances {
-        width: 50%
-    }
-
-    .app__container .content .refinances h2 {
-        font-size: 3.2rem
-    }
-
-    .app__container .content .refinances p {
-        font-size: 1.2rem
-    }
-}
-
-@media (max-width: 600px) {
-    .app__container .content .refinances {
-        width: 70%
-    }
-
-    .app__container .content .refinances h2 {
-        font-size: 3rem
-    }
-
-    .app__container .content .refinances p {
-        font-size: 1rem
-    }
-}
-
-@media (max-width: 480px) {
-    .app__container .content .refinances {
-        width: 86%
-    }
-
-    .app__container .content .refinances h2 {
-        font-size: 2.6rem
-    }
-
-    .app__container .content .refinances p {
-        font-size: .8rem
-    }
-}
-
-.app__container .content .print {
-    position: absolute;
-    bottom: 120px;
-    height: 460px;
-    right: 180px;
-    -webkit-transition: .3s;
-    transition: .3s
-}
-
-.app__container .content .print:last-child {
-    right: -60px
-}
-
-@media (max-width: 850px) {
-    .app__container .content .print {
-        bottom: 140px;
-        height: 400px;
-        right: 150px
-    }
-}
-
-@media (max-width: 768px) {
-    .app__container .content .print {
-        bottom: 60px;
-        height: 400px
-    }
+.imageApp img {
+    width: 100%;
 }
 
 @media (max-width: 700px) {
-    .app__container .content .print {
-        bottom: 40px;
-        height: 340px;
-        right: 120px
+    .sectionApp {
+        height: auto;
+        width: 100%;
+        padding: 0 30px;
+        grid-template-rows: 80px 1fr 80px;
     }
-}
-
-@media (max-width: 600px) {
-    .app__container .content .print {
-        bottom: 40px;
-        height: 440px
+    .logoRefinances{
+        justify-content: center;
+        margin: 7vh;
     }
-
-    .app__container .content .print:last-child {
-        right: -80px
-    }
-}
-
-@media (max-width: 480px) {
-    .app__container .content .print {
-        bottom: 50px
+    .descRefinances {
+        flex-direction: column;
     }
 
-    .app__container .content .print:last-child {
-        right: -150px
+    .descRefinances .imageApp {
+        order: 1;
+        width: 100%;
     }
-}
 
-@media (max-width: 600px) {
-    .app__container .content .print:first-of-type {
-        display: none
-    }
-}
-
-@media (max-width: 768px) {
-    .app {
-        padding: 100px 0
+    .descRefinances .title {
+        font-size: 20px;
     }
 }
 
