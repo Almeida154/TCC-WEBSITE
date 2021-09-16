@@ -904,17 +904,6 @@ header section>.waves .parallax>use:nth-child(4) {
         margin-left: 10px
     }
 }
-
-.quote__wave {
-    display: block;
-    position: relative;
-    height: 80px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    bottom: -2px;
-    background-image: url("../svg/wave2.svg")
-}
-
 .quote__content {
     position: relative;
     padding: 0 calc((100% - 1200px) / 2);
@@ -934,7 +923,7 @@ header section>.waves .parallax>use:nth-child(4) {
     -ms-flex-direction: column;
     flex-direction: column;
     padding: 20px 40px;
-    height: 100vh
+    height: 50vh;
 }
 
 .quote__content .quote {
@@ -1362,7 +1351,7 @@ header section>.waves .parallax>use:nth-child(4) {
     }
     .logoRefinances{
         justify-content: center;
-        margin: 7vh;
+        margin: 5vh;
     }
     .descRefinances {
         flex-direction: column;
