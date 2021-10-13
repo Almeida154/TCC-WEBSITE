@@ -1364,20 +1364,122 @@ header section > .waves .parallax > use:nth-child(4) {
   overflow-x: hidden;
 }
 
-.contact {
-  padding: 0 calc((100% - 1200px) / 2);
-  margin-top: -150px;
-  position: relative;
+/* Contato */
+.contact{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px 100px;
 }
 
-.contact img {
-  height: 700px;
-  position: absolute;
-  left: -500px;
-  top: -200px;
-  -webkit-transition: .3s;
-  transition: .3s;
+.contact:after{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	background-size: cover;
+	filter: blur(50px);
+	z-index: -1;
 }
+.contact-box{
+	max-width: 850px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.leftContact{
+	background: no-repeat center;
+	background-size: cover;
+	height: 100%;
+}
+
+.rightContact{
+	padding: 25px 40px;
+}
+
+.rightContact h2{
+	position: relative;
+	padding: 0 0 10px;
+	margin-bottom: 10px;
+}
+
+.rightContact h2:after{
+	content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 50px;
+    border-radius: 2px;
+	background-image: linear-gradient(109.6deg, #f81650ff 11.2%, #5961f9ff 91.1%);
+
+}
+
+.field{
+	width: 100%;
+	border: 2px solid #f81650ff;
+	border-radius: 10px;
+	outline: none;
+	background-color: transparent;
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	margin-bottom: 22px;
+	transition: 1.3s;
+}
+
+.field:hover{
+	border: 2px solid #5961f9ff;
+}
+
+.field:focus{
+    border: 2px solid #5961f9ff;
+    background-color: #f1f1f1;
+}
+
+.rightContact textarea{
+	min-height: 150px;
+	resize: none;
+}
+
+.rightContact .btn{
+	width: 100%;
+	padding: 0.5rem 1rem;
+	background-image: linear-gradient(109.6deg, #f81650ff 11.2%, #5961f9ff 91.1%);
+	color: #fff;
+	font-size: 1.1rem;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.rightContact .btn:hover{
+	transform: translateY(-10%);
+	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+
+
+@media screen and (max-width: 880px){
+	.contact-box{
+		grid-template-columns: 1fr;
+	}
+	.leftContact{
+		height: 200px;
+	}
+}
+
 
 @media (max-width: 768px) {
   .contact img {
@@ -1388,75 +1490,14 @@ header section > .waves .parallax > use:nth-child(4) {
 }
 
 @media (max-width: 600px) {
-  .contact img {
-    left: -400px;
-    top: -30px;
-  }
-}
-
-@media (max-width: 510px) {
-  .contact img {
-    height: 400px;
-    left: -340px;
+  .leftContact img {
+    height: 300px;
   }
 }
 
 @media (max-width: 400px) {
-  .contact img {
+  .leftContact{
     display: none;
-  }
-}
-
-.contact__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 120px 40px;
-  -webkit-transition: .3s;
-  transition: .3s;
-}
-
-.contact__content form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.contact__content form h4 {
-  font-family: Futura-Medium;
-  background-image: linear-gradient(109.6deg, #f81650ff 11.2%, #5961f9ff 91.1%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  width: 300px;
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.contact__content form input, .contact__content form textarea {
-  width: 300px;
-  margin-bottom: 10px;
-  margin-top: 0;
-}
-
-@media (max-width: 400px) {
-  .contact__content {
-    padding: 120px 40px 40px;
   }
 }
 
