@@ -1291,7 +1291,7 @@ header section > .waves .parallax > use:nth-child(4) {
 
 
 .sectionApp {
-  background: #cc0033;
+  background: #cc0066;
   width: 100%;
   padding-left: 125px;
   display: grid;
@@ -1300,11 +1300,12 @@ header section > .waves .parallax > use:nth-child(4) {
 }
 
 .logoRefinances {
+  width: 10vh;
+  padding: 10px;
   display: flex;
-  align-items: center;
 }
 .logoRefinances img{
-  width: 12%;
+  width: 100%;
 }
 .descRefinances {
   width: 100%;
@@ -1315,7 +1316,7 @@ header section > .waves .parallax > use:nth-child(4) {
   cursor: pointer;
   background: #ececec;
   border: none;
-  color: #cc0033;
+  color: #cc0066;
   padding: 12px 40px;
   border-radius: 10px;
   transition: .6s;
@@ -1330,13 +1331,27 @@ header section > .waves .parallax > use:nth-child(4) {
   width: 40%;
 }
 
-.descRefinances .title {
+.descRefinances .title{
   font-size: 2.4rem;
-  font-weight: 700;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.title h1{
+  font-family: HiRolley;
+  font-size: 3.4rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.title h2{
+  font-family: Futura-Medium;
+  font-size: 2.4rem;
   margin-bottom: 20px;
   color: #fff;
 }
 .descRefinances .desc {
+  font-family: Nunito-Regular;
   font-size: 1.1rem;
   font-weight: 100;
   padding-bottom: 20px;
@@ -1384,13 +1399,14 @@ header section > .waves .parallax > use:nth-child(4) {
 
 /* Contato */
 .contact{
+  min-width: 350px;
 	position: relative;
 	width: 100%;
 	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	padding: 20px 100px;
+	padding: 20px 40px;
 }
 
 .contact:after{
@@ -1405,7 +1421,7 @@ header section > .waves .parallax > use:nth-child(4) {
 	z-index: -1;
 }
 .contact-box{
-	max-width: 850px;
+	max-width: 800px;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: center;
