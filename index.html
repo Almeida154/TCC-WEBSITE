@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evoke | Sua empresa de software</title>
+    <!--fontAwwesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> <!-- Flickity -->
     <link rel="stylesheet" href="public/sass/main.css">
     <link rel="shortcut icon" href="public/img/favicon/favicon-32x32.png" type="image/x-icon">
@@ -411,15 +413,48 @@
             </div>
         </section>
         <section class="contact">
-            <div class="contact-box">
-                <div class="leftContact"><img src="public/svg/Contact us-rafiki.svg"></div>
-                <div class="rightContact">
-                    <h2>Entre em Contato</h2>
-                    <input type="text" class="field" placeholder="Seu Nome">
-                    <input type="text" class="field" placeholder="Seu Email">
-                    <textarea placeholder="Mensagem" class="field"></textarea>
-                    <button class="btn">Enviar</button>
+            <div class="containerContact">
+                <div class="content">
+                  <div class="left-side">
+                    <div class="address details">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <div class="topic">Endereço</div>
+                      <div class="text-one">Guaianazes, SP</div>
+                    </div>
+                    <div class="phone details">
+                      <i class="fas fa-phone-alt"></i>
+                      <div class="topic">Telefone</div>
+                      <div class="text-one">(11) 4002-8922</div>
+                    </div>
+                    <div class="email details">
+                      <i class="fas fa-envelope"></i>
+                      <div class="topic">Email</div>
+                      <div class="text-one">EvokeCorp@gmail.com</div>
+                    </div>
+                  </div>
+                  <div class="right-side">
+                    <div class="topic-text">Entre em Contato</div>
+                    <p>Envie um feedback para evoluirmos juntos </p>
+                  <form action="#">
+                    <div class="input-box">
+                      <i class="far fa-user"></i>
+                      <input type="text" placeholder="Seu Nome">
+                    </div>
+                    <div class="input-box">
+                      <i class="far fa-envelope"></i>
+                      <input type="text" placeholder="Seu Email">
+                    </div>
+                    <div class="input-box message-box">
+                      <i class="far fa-comments" id="msg"></i>
+                      <textarea placeholder="Mensagem" class="field"></textarea>
+                    </div>
+                    <div class="button">
+                      <input type="submit" value="Enviar" >
+                    </div>
+                  </form>
                 </div>
+                </div>
+              </div>
             </div>
         </section>
     </main>
