@@ -1300,13 +1300,6 @@ header section > .waves .parallax > use:nth-child(4) {
   width: 40%;
   background-color: #ee4266;
 }
-
-/* .leftApp .logo h1{
-  font-family: HiRolley;
-  color: #fff;
-  font-size: 3.4vh;
-} */
-
 .leftApp .logo img{
   margin: 20px 0px 0px 12%;
   display: flex;
@@ -1345,8 +1338,8 @@ header section > .waves .parallax > use:nth-child(4) {
 
 .row {
   width: 85%;
-  margin: 10 auto;
-  padding: 10px 0;
+  margin: 25 auto;
+  padding: 15px 0;
   display: flex;
   flex-flow: row nowrap;
 }
@@ -1356,13 +1349,14 @@ article {
 }
 
 article>.row {
-  gap: 25px;
+  gap: 35px;
   }
 
 article .row .imgTop{
-  height: 15vh;
-  width: 15vh;
+  height: 10vh;
+  width: 10vh;
 }
+
 
 article .row .titleA{
   text-transform: uppercase;
