@@ -1,38 +1,38 @@
 .partners {
-    @include boundaries(60px);
+  @include boundaries(60px);
 
-    &__title {
-        h3 {
-            @include Futura(Medium);
-            color: rgba(0, 0, 0, 0.534);
-            padding: 0 40px 60px;
-            font-size: 3rem;
-            line-height: 100%;
-            text-align: center
-        }
+  &__title {
+    h3 {
+      @include Futura(Medium);
+      color: rgba(0, 0, 0, 0.534);
+      padding: 0 40px 60px;
+      font-size: 3rem;
+      line-height: 100%;
+      text-align: center;
     }
-    
-    &__content {
-        @include flex();
-        flex-wrap: wrap;
-        gap: 30px;
-        
-        .partner {
-            @include flex();
-            background-color: $cultured;
-            width: 200px;
-            height: 100px;
-            border-radius: 15px;
-            transition: .3s;
-            cursor: pointer;
-    
-            img {
-                height: 50px;
-            }
-    
-            @media (max-width: $very-small) {
-                width: 230px;
-            }
-        }
+  }
+
+  &__content {
+    @include flex();
+    flex-wrap: wrap;
+    gap: 30px;
+
+    .partner {
+      @include flex();
+      background-color: $cultured;
+      width: 200px;
+      height: 100px;
+      border-radius: 15px;
+      transition: 0.3s;
+      cursor: pointer;
+
+      img {
+        height: 50px;
+      }
+
+      @media (max-width: $very-small) {
+        width: 230px;
+      }
     }
+  }
 }

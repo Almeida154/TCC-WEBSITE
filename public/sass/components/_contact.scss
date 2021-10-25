@@ -1,59 +1,67 @@
 .contact {
-    @include boundaries();
-    margin-top: -150px;
-    position: relative;
-    
-    img {
-        height: 700px;
-        position: absolute;
-        left: -500px;
-        top: -200px;
-        transition: .3s;
+  @include boundaries();
 
-        @media (max-width: $medium) {
-            height: 500px;
-            left: -350px;
-            top: -30px;
-        }
-        @media (max-width: $small) {
-            left: -400px;
-            top: -30px;
-        }
-        @media (max-width: 510px) {
-            height: 400px;
-            left: -340px;
-        }
-        @media (max-width: 400px) {
-            display: none;
-        }
+  &__content {
+    @include flex();
+    padding: 100px 0;
+    padding-top: 60px;
+
+    form {
+      @include flex();
+      border-radius: 20px;
+      padding: 80px 100px;
+      box-shadow: 0 0 2em rgba(0, 0, 0, 0.08);
+      flex-direction: column;
+      background-color: $white;
+      width: min-content;
+      transition: 0.3s;
+      max-width: 90%;
+
+      @media (max-width: $small) {
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+      }
+
+      h3 {
+        @include Futura(Medium);
+        color: $red-crayola;
+        width: 300px;
+        margin-bottom: 20px;
+        font-size: 2rem;
+        align-self: flex-start;
+      }
+
+      input,
+      button,
+      textarea {
+        background-color: #f0f1f8;
+        border: 0;
+        color: #242424;
+        width: 320px;
+        height: 48px;
+        margin-bottom: 10px;
+        margin-top: 0;
+        border-radius: 10px;
+      }
+
+      textarea {
+        height: 100px;
+      }
+
+      button {
+        @include Futura(Medium);
+        background-color: $red-crayola;
+        opacity: 0.7;
+        color: $white;
+        font-size: 1.6rem;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      button:hover {
+        opacity: 0.8;
+      }
     }
-
-    &__content {
-        @include flex();
-        padding: 120px 40px;
-        transition: .3s;
-
-        form {
-            @include flex();
-            flex-direction: column;
-
-            h4 {
-                @include Futura(Medium);
-                @include gradientText();
-                width: 300px;
-                margin-bottom: 20px;
-                font-size: 2rem;
-            }
-
-            input, textarea {
-                width: 300px;
-                margin-bottom: 10px;
-                margin-top: 0;
-            }
-        }
-
-        @media (max-width: 400px) {
-            padding: 120px 40px 40px;
-        }
-    }
+  }
 }
