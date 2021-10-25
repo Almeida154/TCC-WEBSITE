@@ -2,189 +2,211 @@ $circle-size: 42px; // tamanho do círculo
 $marginBetweenDateAndCircle: 135px;
 
 .timeline {
-    @include boundaries();
-    background-color: $cultured;
-    position: relative;
-    width: 100%;
-    overflow-x: hidden;
-    transition: .3s;
+  @include boundaries();
+  background-color: $cultured;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  transition: 0.3s;
 
-    &__content {
-        padding: 140px 80px 80px;
-        margin: 0 auto;
-        transition: .3s;
+  &__content {
+    padding: 140px 80px 80px;
+    margin: 0 auto;
+    transition: 0.3s;
 
-        &::after { // linha vertical
-            background: #4e5ed3;
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 50%; // move a linha pro meio
-            width: 4px;
-            margin-left: -2px; // ta 50%, então tem q voltar metade (-1px nesse caso que o width é 2px)
-            transition: .3s ease-in-out;
-        }
-
-        .item { // cada 'story'
-            background: inherit; // herda do pai
-            position: relative;
-            width: 50%;
-            
-            &.left { left: 0; } // mantém na esquerda
-            &.right { left: 50%; } // joga pra direita
-            
-            &::after { // círculo
-                content: '';
-                position: absolute;
-                width: $circle-size;
-                height: $circle-size;
-                top: 0;
-                background: #ffffff;
-                border: 3px solid #4e5ed3;
-                box-shadow: 3px 3px 0px #bab5f8;
-                border-radius: 50%;
-                z-index: 1;
-            }
-
-            // círculos centralizados
-            &.left::after { right: -#{$circle-size / 2}; } 
-            &.right::after { left: -#{$circle-size / 2}; }
-
-            &__date { // data
-                @include Futura(Light);
-                position: absolute;
-                display: inline-block;
-                top: 10px;
-                text-align: center;
-                font-size: 1.2rem;
-                font-weight: bold;
-                color: #00000026;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                z-index: 1;
-            }
-
-            &.left .item__date { right: -#{$marginBetweenDateAndCircle}; }
-            &.right .item__date { left: -#{$marginBetweenDateAndCircle}; }
-
-            &__content {
-                position: relative;
-                padding: 10px 80px 60px;
-
-                h2 {
-                    @include Futura(Medium);
-                    color: #303b94;
-                    margin: 0 0 14px 0;
-                    font-size: 1.8rem;
-                    line-height: 70%;
-                    letter-spacing: 5px
-                }
-
-                p {
-                    @include Futura(Medium);
-                    font-size: 1.6rem;
-                    line-height: 80%;
-                    color: #00000048;
-
-                    span {
-                        color: #00000080;
-                        font-weight: bold;
-                    }
-                }
-
-                p + p {
-                    margin-top: 10px;
-                }
-            }
-
-            &.left .item__content {
-                padding-left: 0;
-                text-align: right;
-            }
-
-            & .item__content {
-                padding-right: 20px;
-            }
-
-            @media (max-width: $medium) {
-                & {
-                    width: 100%;
-                    padding-left: 120px;
-                    padding-right: 0;
-                }
-                &.right { left: 0; }
-                &.right::after,
-                &.left::after {  // círculo
-                    left: 40px;
-                }
-                &.left .item__date, 
-                &.right .item__date {
-                    width: max-content;
-                    left: -40px;
-                }
-                &.left .item__content,
-                &.right .item__content {
-                    padding-left: 0;
-                    text-align: left;
-                }
-            }
-
-            @media (max-width: $small) {
-                & {
-                    width: 100%;
-                    padding-left: 0px;
-                }
-                &.right::after,
-                &.left::after {  // círculo
-                    left: -60px;
-                }
-                &.left .item__date, 
-                &.right .item__date {
-                    top: 0;
-                    width: max-content;
-                    left: auto;
-                    right: 0;
-                }
-            }
-
-            @media (max-width: $very-small) {
-                &.left .item__date, 
-                &.right .item__date {
-                    background-color: $white;
-                    right: -40px;
-                    padding: 8px;
-                    border-top-left-radius: 25px;
-                    border-bottom-left-radius: 25px;
-                    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, .1);
-                }
-            }
-        }
-
-        @media (max-width: $medium) {
-            &::after { // linha vertical
-                left: 140px;
-            }
-        }
-
-        @media (max-width: $small) {
-            & {
-                padding: 80px 40px;
-            }
-            &::after { // linha vertical
-                left: 2px;
-                width: 10px;
-            }  
-        }
+    &::after {
+      // linha vertical
+      background: #4e5ed3;
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%; // move a linha pro meio
+      width: 4px;
+      margin-left: -2px; // ta 50%, então tem q voltar metade (-1px nesse caso que o width é 2px)
+      transition: 0.3s ease-in-out;
     }
 
-    &__content > {
-        img {
-            position: absolute;
-            top: 40px;
-            right: -200px;
-            width: 500px;
-            transform: rotateY(190deg);
+    .item {
+      // cada 'story'
+      background: inherit; // herda do pai
+      position: relative;
+      width: 50%;
+
+      &.left {
+        left: 0;
+      } // mantém na esquerda
+      &.right {
+        left: 50%;
+      } // joga pra direita
+
+      &::after {
+        // círculo
+        content: "";
+        position: absolute;
+        width: $circle-size;
+        height: $circle-size;
+        top: 0;
+        background: #ffffff;
+        border: 3px solid #4e5ed3;
+        box-shadow: 3px 3px 0px #bab5f8;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      // círculos centralizados
+      &.left::after {
+        right: -#{$circle-size / 2};
+      }
+      &.right::after {
+        left: -#{$circle-size / 2};
+      }
+
+      &__date {
+        // data
+        @include Futura(Light);
+        position: absolute;
+        display: inline-block;
+        top: 10px;
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #00000026;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        z-index: 1;
+      }
+
+      &.left .item__date {
+        right: -#{$marginBetweenDateAndCircle};
+      }
+      &.right .item__date {
+        left: -#{$marginBetweenDateAndCircle};
+      }
+
+      &__content {
+        position: relative;
+        padding: 10px 80px 60px;
+
+        h2 {
+          @include Futura(Medium);
+          color: #303b94;
+          margin: 0 0 14px 0;
+          font-size: 1.8rem;
+          line-height: 70%;
+          letter-spacing: 5px;
         }
+
+        p {
+          @include Futura(Medium);
+          font-size: 1.6rem;
+          line-height: 80%;
+          color: #00000048;
+
+          span {
+            color: #00000080;
+            font-weight: bold;
+          }
+        }
+
+        p + p {
+          margin-top: 10px;
+        }
+      }
+
+      &.left .item__content {
+        padding: 10px 80px 60px 20px;
+        text-align: right;
+      }
+
+      & .item__content {
+        padding-right: 20px;
+      }
+
+      @media (max-width: $medium) {
+        & {
+          width: 100%;
+          padding-left: 120px;
+          padding-right: 0;
+        }
+        &.right {
+          left: 0;
+        }
+        &.right::after,
+        &.left::after {
+          // círculo
+          left: 40px;
+        }
+        &.left .item__date,
+        &.right .item__date {
+          width: max-content;
+          left: -40px;
+        }
+        &.left .item__content,
+        &.right .item__content {
+          padding-left: 0;
+          text-align: left;
+        }
+      }
+
+      @media (max-width: $small) {
+        & {
+          width: 100%;
+          padding-left: 0px;
+        }
+        &.right::after,
+        &.left::after {
+          // círculo
+          left: -60px;
+        }
+        &.left .item__date,
+        &.right .item__date {
+          top: 0;
+          width: max-content;
+          left: auto;
+          right: 0;
+        }
+      }
+
+      @media (max-width: $very-small) {
+        &.left .item__date,
+        &.right .item__date {
+          background-color: $white;
+          right: -40px;
+          padding: 8px;
+          border-top-left-radius: 25px;
+          border-bottom-left-radius: 25px;
+          box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.1);
+        }
+      }
     }
+
+    @media (max-width: $medium) {
+      &::after {
+        // linha vertical
+        left: 140px;
+      }
+    }
+
+    @media (max-width: $small) {
+      & {
+        padding: 80px 40px;
+      }
+      &::after {
+        // linha vertical
+        left: 2px;
+        width: 10px;
+      }
+    }
+  }
+
+  &__content > {
+    img {
+      position: absolute;
+      top: 40px;
+      right: -200px;
+      width: 500px;
+      transform: rotateY(190deg);
+    }
+  }
 }
