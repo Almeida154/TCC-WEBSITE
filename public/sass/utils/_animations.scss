@@ -1,68 +1,111 @@
 @keyframes x-axis {
-    from {
-        opacity: 0;
-        transform: translateX(20px);
-    }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes y-axis {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes y-axis-icon {
-    from {
-        opacity: 0;
-        transform: translateY(100px);
-    }
-    to { opacity: .3; }
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 0.3;
+  }
 }
 
 @keyframes move-forever {
-    0% { transform: translate3d(-90px,0,0); }
-    100% { transform: translate3d(85px,0,0); }
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
 }
 
-@mixin animate ($direction: x, $time: 2s) {
-    @if $direction == x {
-        animation: x-axis $time backwards;
-    } @else if $direction == y {
-        animation: y-axis $time backwards;
-    }
+@mixin animate($direction: x, $time: 2s) {
+  @if $direction == x {
+    animation: x-axis $time backwards;
+  } @else if $direction == y {
+    animation: y-axis $time backwards;
+  }
 }
 
-@mixin animate-icon ($time) {
-    animation: y-axis-icon $time backwards;
+@mixin animate-icon($time) {
+  animation: y-axis-icon $time backwards;
 }
 
 @mixin wave-animate {
-    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
 }
 
-.anime-top{
-    opacity: 0;
-    transform: translate3d(0, -50px, 0);
-    transition: .5s;
+.anime-top {
+  opacity: 0;
+  transform: translate3d(0, -50px, 0);
+  transition: 0.5s;
 }
 
-.anime-left{
-    opacity: 0;
-    transform: translate3d(-100px, 0, 0);
-    transition: .5s;
+.anime-left {
+  opacity: 0;
+  transform: translate3d(-100px, 0, 0);
+  transition: 0.5s;
 }
 
-.anime-right{
-    opacity: 0;
-    transform: translate3d(100px, 0, 0);
-    transition: .5s;
+.anime-right {
+  opacity: 0;
+  transform: translate3d(100px, 0, 0);
+  transition: 0.5s;
 }
 
-.anime-start{
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition: .5s;
+.anime-start {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 0.5s;
+}
+
+// Splash
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: #161616;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  width: 80px;
+  height: 80px;
+}
+
+.loader img {
+  transition: 1.2;
+  animation: spin 2s linear infinite;
 }
