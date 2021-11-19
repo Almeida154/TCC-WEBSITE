@@ -1,26 +1,29 @@
 const btnMobile = document.getElementById("btn-mobile");
 const navactive = document.getElementById("nav");
 const hamb = document.getElementById("hamburguer");
+const logo = document.getElementById("logo");
 const navbar = document.getElementsByClassName("menu-item");
 
 for (var i = 0; i < navbar.length; i++) {
   navbar.item(i).addEventListener("click", toggleMenu);
-  navbar.item(i).addEventListener("touchstart", toggleMenu);
+  //navbar.item(i).addEventListener("touchstart", toggleMenu);
 }
 btnMobile.addEventListener("click", toggleMenu);
 btnMobile.addEventListener("touchsatart", toggleMenu);
+logo.addEventListener("click", closeMenu);
+logo.addEventListener("touchsatart", closeMenu);
 
 function toggleMenu(event) {
   if (event.type == "touchstart") event.preventDefault();
   const nav = document.getElementById("nav");
   nav.classList.toggle("active");
   const active = nav.classList.contains("active");
-  event.currentTarget.setAttribute("aria-expanded", active);
-  if (navactive.classList.contains("active")) {
-    hamb.style = "::after {transform: rotate(45deg);}";
-  } else {
-    hamb.style = "transform: rotate(0deg);";
-  }
+}
+function closeMenu(event) {
+  if (event.type == "touchstart") event.preventDefault();
+  const nav = document.getElementById("nav");
+  nav.classList.remove("active");
+  const active = nav.classList.contains("active");
 }
 
 const header = document.querySelector(".header");
