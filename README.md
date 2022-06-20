@@ -12,8 +12,8 @@
 </p>
 
 <p align="center">
-    <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=d42177&labelColor=f51753">
-    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Almeida154/evoke-website?color=d42177&labelColor=f51753">
+    <img alt="License" src="https://img.shields.io/static/v1?label=license&message=MIT&color=4a2dc4&labelColor=6644f6">
+    <img alt="Repository size" src="https://img.shields.io/github/repo-size/Almeida154/evoke-website?color=4a2dc4&labelColor=6644f6">
 </p>
 
 <p align="center">
